@@ -29,6 +29,17 @@
                 margin: 5px;
                 transition: padding 1s;
 
+                &:before {
+                    content: "⥁";
+                    font-size: 24px;
+                }
+
+                &:hover:after {
+                    content: "["attr(href) "]";
+                    font-size: 7px;
+                    margin-left: 10px;
+                }
+
                 &:hover {
                     transition: padding 1s;
                     background-image: url("https://img.icons8.com/cotton/64/000000/image-document.png");
@@ -58,5 +69,31 @@
         }
     }
 
+    @mida_ull: 40px;
+    @color_ull: #84cce6;
+    @percentatgeIris: 0.6;
+    @margeIris: 0.5 * (1 - @percentatgeIris) * @mida_ull;
+
+    .eye {
+        width: @mida_ull;
+        height: @mida_ull;
+        display: block;
+        background-color: @color_ull;
+        border-radius: 50%;
+        position: relative;
+
+        &:after {
+            content: "";
+            display: block;
+            width: 100% * @percentatgeIris;
+            height: 100% * @percentatgeIris;
+            background-color: black;
+            border-radius: 50%;
+
+            position: absolute;
+            top: @margeIris;
+            left: @margeIris;
+        }
+    }
 
 }

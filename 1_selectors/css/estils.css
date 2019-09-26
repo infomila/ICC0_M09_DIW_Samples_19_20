@@ -22,6 +22,15 @@
   margin: 5px;
   transition: padding 1s;
 }
+#edu_iesmila_diw .link_list li a:before {
+  content: "⥁";
+  font-size: 24px;
+}
+#edu_iesmila_diw .link_list li a:hover:after {
+  content: "[" attr(href) "]";
+  font-size: 7px;
+  margin-left: 10px;
+}
 #edu_iesmila_diw .link_list li a:hover {
   transition: padding 1s;
   background-image: url("https://img.icons8.com/cotton/64/000000/image-document.png");
@@ -40,4 +49,23 @@
 }
 #edu_iesmila_diw .link_list li:hover {
   background-color: bisque;
+}
+#edu_iesmila_diw .eye {
+  width: 40px;
+  height: 40px;
+  display: block;
+  background-color: #84cce6;
+  border-radius: 50%;
+  position: relative;
+}
+#edu_iesmila_diw .eye:after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 60%;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  left: 8px;
 }
