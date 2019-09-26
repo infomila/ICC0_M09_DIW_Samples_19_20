@@ -1,0 +1,62 @@
+@vermell_intens: #f8cbbb;
+@marge_lateral: 10px;
+
+#edu_iesmila_diw {
+    body {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        background-color: @vermell_intens;
+        margin-left: @marge_lateral + 5;
+    }
+
+    input[type="text"]:focus {
+        border: 3px solid red;
+    }
+
+    a:focus {
+        border: 3px solid blue;
+    }
+
+
+    .link_list {
+        padding: 0px;
+
+        li {
+            display: block;
+
+            a {
+                display: block;
+                margin: 5px;
+                transition: padding 1s;
+
+                &:hover {
+                    transition: padding 1s;
+                    background-image: url("https://img.icons8.com/cotton/64/000000/image-document.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    padding-left: 25px;
+                }
+
+                &:link {
+                    color: red;
+                }
+            }
+
+
+            a[href$=".pdf"]:hover {
+                background-image: url("https://img.icons8.com/office/16/000000/pdf.png");
+            }
+
+            a[href$=".xlsx"]:hover {
+                background-image: url("https://img.icons8.com/color/48/000000/ms-excel.png");
+            }
+
+            &:hover {
+                background-color: bisque;
+            }
+
+        }
+    }
+
+
+}
