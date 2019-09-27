@@ -53,12 +53,37 @@
 #edu_iesmila_diw .eye {
   width: 40px;
   height: 40px;
+  padding: 0px 30px;
+  background-color: white;
+  border-radius: 50%;
+}
+#edu_iesmila_diw .eye:hover {
+  height: 10px;
+  margin-top: 30px;
+}
+#edu_iesmila_diw .eye .iris {
+  margin: 0px auto;
+  box-sizing: border-box;
+  border: 1px solid rgba(68, 68, 68, 0.29);
+  width: 40px;
+  height: 40px;
   display: block;
   background-color: #84cce6;
   border-radius: 50%;
   position: relative;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b4e391+0,61c419+64,b4e391+100 */
+  background: #b4e391;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #b4e391 0%, #61c419 64%, #b4e391 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #b4e391 0%, #61c419 64%, #b4e391 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #b4e391 0%, #61c419 64%, #b4e391 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b4e391', endColorstr='#b4e391', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
 }
-#edu_iesmila_diw .eye:after {
+#edu_iesmila_diw .eye .iris:before {
   content: "";
   display: block;
   width: 60%;
@@ -68,4 +93,47 @@
   position: absolute;
   top: 8px;
   left: 8px;
+  -webkit-box-shadow: 0px 0px 7px 1px #000000;
+  box-shadow: 0px 0px 7px 1px #000000;
+}
+#edu_iesmila_diw .eye .iris:after {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 30%;
+  background-color: rgba(255, 255, 255, 0.76);
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 60%;
+}
+#edu_iesmila_diw .taula_alternada {
+  padding: 0px;
+}
+#edu_iesmila_diw .taula_alternada li {
+  display: block;
+  height: 30px;
+  padding: 4px;
+  line-height: 30px;
+  padding: 5px;
+}
+#edu_iesmila_diw .taula_alternada li:nth-child(3n) {
+  background-color: rgba(129, 211, 211, 0.54);
+}
+#edu_iesmila_diw .taula_alternada li:nth-child(3n+1) {
+  background-color: rgba(183, 237, 237, 0.54);
+}
+#edu_iesmila_diw .taula_alternada li:nth-child(3n+2) {
+  background-color: rgba(11, 167, 167, 0.54);
+}
+#edu_iesmila_diw .taula_alternada li span,
+#edu_iesmila_diw .taula_alternada li img {
+  display: block;
+  float: left;
+}
+#edu_iesmila_diw .taula_alternada li span {
+  margin-left: 5px;
+}
+#edu_iesmila_diw .taula_alternada img {
+  height: 30px;
 }
