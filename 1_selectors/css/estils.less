@@ -70,71 +70,128 @@
     }
 
     @mida_ull: 40px;
+    @mida_ull_tancat: 20px;
     @color_ull: #84cce6;
-    @percentatgeIris: 0.6;
+    @percentatgeIris: 0.3;
     @margeIris: 0.5 * (1 - @percentatgeIris) * @mida_ull;
 
-    .eye {
-        width: @mida_ull;
-        height: @mida_ull;
-        padding: 0px 30px;
-        background-color: white;
-        border-radius: 50%;
+    // La cara apila els dos ulls en horitzontal (row)
+    .cara {
+        display: flex;
+        flex-direction: row;
+    }
 
+    .eye {
+        // aquest contenidor té mida fixa, no canvia, i serveix
+        // per a fer el hover, doncs la seva àrea no encongeix,
+        // cosa que provocaria que el punter del mouse surti del
+        // hoveer
+        padding: 20px;
+        width: 3*@mida_ull;
+        height: @mida_ull;
+        background-color: transparent;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+
+        // Efecte de clucar l'ull i dil·latar la pupil·la
         &:hover {
-            height: 10px;
-            margin-top: @mida_ull - 10px;
+            .blanc {
+                height: @mida_ull_tancat;
+
+                .iris {
+                    // corregim el desplaçament de l'iris
+                    // movent cap amunt la distància
+                    // que es desplaça al tancar.
+                    top: -0.5 * (@mida_ull - @mida_ull_tancat);
+                    transition: top 1s;
+
+                    &:before {
+                        transform: scale(2); // dupliquem la mida
+                        transition: transform 0.5s;
+                    }
+                }
+
+                transition: height 1s;
+            }
         }
 
-        .iris {
-            margin: 0px auto;
-            box-sizing: border-box;
-            border: 1px solid rgba(68, 68, 68, 0.29);
-            width: @mida_ull;
+        .blanc {
+            width: 3*@mida_ull;
             height: @mida_ull;
-            display: block;
-            background-color: @color_ull;
+            box-sizing: border-box;
+            //padding: 0px 30px;
+            background-color: white;
             border-radius: 50%;
             position: relative;
-            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b4e391+0,61c419+64,b4e391+100 */
-            background: #b4e391;
-            /* Old browsers */
-            background: -moz-radial-gradient(center, ellipse cover, #b4e391 0%, #61c419 64%, #b4e391 100%);
-            /* FF3.6-15 */
-            background: -webkit-radial-gradient(center, ellipse cover, #b4e391 0%, #61c419 64%, #b4e391 100%);
-            /* Chrome10-25,Safari5.1-6 */
-            background: radial-gradient(ellipse at center, #b4e391 0%, #61c419 64%, #b4e391 100%);
-            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b4e391', endColorstr='#b4e391', GradientType=1);
-            /* IE6-9 fallback on horizontal gradient */
+            overflow: hidden;
+            transition: height 1s;
+            //transition-timing-function: linear, linear;
+            -webkit-box-shadow: inset 3px 2px 8px 0px #000000;
+            box-shadow: inset 3px 2px 8px 0px #000000;
 
-            &:before {
-                content: "";
+
+            .iris {
+                transition: top 1s;
+                position: relative;
+                top: 0px;
+                margin: 0px auto;
+                box-sizing: border-box;
+                border: 1px solid rgba(68, 68, 68, 0.29);
+                width: @mida_ull;
+                height: @mida_ull;
                 display: block;
-                width: 100% * @percentatgeIris;
-                height: 100% * @percentatgeIris;
-                background-color: black;
+                background-color: @color_ull;
                 border-radius: 50%;
-                position: absolute;
-                top: @margeIris;
-                left: @margeIris;
-                -webkit-box-shadow: 0px 0px 7px 1px #000000;
-                box-shadow: 0px 0px 7px 1px #000000;
+
+                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b4e391+0,61c419+64,b4e391+100 */
+                background: #b4e391;
+                /* Old browsers */
+                background: -moz-radial-gradient(center, ellipse cover, #b4e391 0%, #61c419 64%, #b4e391 100%);
+                /* FF3.6-15 */
+                background: -webkit-radial-gradient(center, ellipse cover, #b4e391 0%, #61c419 64%, #b4e391 100%);
+                /* Chrome10-25,Safari5.1-6 */
+                background: radial-gradient(ellipse at center, #b4e391 0%, #61c419 64%, #b4e391 100%);
+                /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b4e391', endColorstr='#b4e391', GradientType=1);
+                /* IE6-9 fallback on horizontal gradient */
+
+                &:before {
+                    // Bola negra interior
+                    content: "";
+                    display: block;
+                    transition: transform 0.5s;
+                    width: 100% * @percentatgeIris;
+                    height: 100% * @percentatgeIris;
+                    background-color: black;
+                    border-radius: 50%;
+                    position: absolute;
+                    //margin: 0px auto;
+
+
+                    top: @margeIris;
+                    left: @margeIris;
+                    -webkit-box-shadow: 0px 0px 7px 1px #000000;
+                    box-shadow: 0px 0px 7px 1px #000000;
+                }
+
+                &:after {
+                    // Brillo blanc
+                    content: "";
+                    display: block;
+                    width: 30%;
+                    height: 30%;
+                    background-color: rgba(255, 255, 255, 0.76);
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 20%;
+                    left: 60%;
+                }
+
+
             }
-
-            &:after {
-                content: "";
-                display: block;
-                width: 30%;
-                height: 30%;
-                background-color: rgba(255, 255, 255, 0.76);
-                border-radius: 50%;
-                position: absolute;
-                top: 20%;
-                left: 60%;
-            }
-
-
         }
     }
 
@@ -176,7 +233,5 @@
             height: 30px;
         }
     }
-
-
 
 }
