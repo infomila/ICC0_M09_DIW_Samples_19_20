@@ -1,3 +1,29 @@
 @hlinia: 40px;
 
-nav {}
+nav {
+
+    ul,
+    li {
+        display: block;
+        box-sizing: border-box;
+        height: @hlinia;
+
+    }
+
+    li {
+        float: left;
+        width: 200px;
+
+        ul {
+            display: none;
+        }
+
+        &:hover > ul {
+            display: block;
+        }
+    }
+
+
+
+
+}
