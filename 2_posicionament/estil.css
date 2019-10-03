@@ -6,11 +6,24 @@ nav {
   left: 50%;
   transform: translateX(-50%);
 }
+nav:hover ul {
+  top: 0%;
+}
 nav h1 {
+  position: relative;
   display: block;
   border: 1px solid black;
   padding: 10px;
   background-color: aqua;
+  z-index: 1000;
+}
+nav div {
+  position: relative;
+}
+nav ul {
+  position: absolute;
+  bottom: 100%;
+  z-index: 100;
 }
 nav ul li {
   display: block;

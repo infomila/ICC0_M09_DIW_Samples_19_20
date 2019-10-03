@@ -6,14 +6,35 @@ nav {
     left: 50%;
     transform: translateX(-50%);
 
+    &:hover ul {
+        //display: block;
+        //height: auto;
+        //transition: height 2s;
+        top: 0%;
+    }
+
     h1 {
+        position: relative;
         display: block;
         border: 1px solid black;
         padding: 10px;
         background-color: aqua;
+        z-index: 1000;
+    }
+
+    div {
+        position: relative;
     }
 
     ul {
+        //display: none;
+        //height: 0px;
+        //overflow: hidden;
+        //transition: bottom 2s;
+        position: absolute;
+        bottom: 100%;
+        z-index: 100;
+
         li {
             display: block;
             border: 1px solid black;
