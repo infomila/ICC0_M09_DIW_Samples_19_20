@@ -7,12 +7,17 @@ nav {
         display: block;
         box-sizing: border-box;
         height: @hlinia;
+        border: 1px solid black;
+        text-align: center;
+        line-height: @hlinia;
 
     }
 
     li {
+        background-color: azure;
         float: left;
         width: 200px;
+        position: relative;
 
         ul {
             display: none;
@@ -21,8 +26,34 @@ nav {
         &:hover > ul {
             display: block;
         }
+
+        &:hover {
+            background-color: aqua;
+        }
     }
 
+
+    > div > ul > li > ul {
+        position: absolute;
+        top: 100%;
+        left: -2px;
+
+        li:nth-child(2n+1) {
+            background-color: aquamarine;
+        }
+
+        li:hover {
+            background-color: aqua;
+        }
+
+        ul {
+            position: absolute;
+            top: 0%;
+            left: 100%;
+        }
+
+
+    }
 
 
 

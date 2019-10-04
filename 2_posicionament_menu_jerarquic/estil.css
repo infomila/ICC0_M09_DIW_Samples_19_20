@@ -4,14 +4,38 @@ nav li {
   display: block;
   box-sizing: border-box;
   height: 40px;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 40px;
 }
 nav li {
+  background-color: azure;
   float: left;
   width: 200px;
+  position: relative;
 }
 nav li ul {
   display: none;
 }
 nav li:hover > ul {
   display: block;
+}
+nav li:hover {
+  background-color: aqua;
+}
+nav > div > ul > li > ul {
+  position: absolute;
+  top: 100%;
+  left: -2px;
+}
+nav > div > ul > li > ul li:nth-child(2n+1) {
+  background-color: aquamarine;
+}
+nav > div > ul > li > ul li:hover {
+  background-color: aqua;
+}
+nav > div > ul > li > ul ul {
+  position: absolute;
+  top: 0%;
+  left: 100%;
 }
