@@ -1,0 +1,85 @@
+html {
+
+    nav {
+
+        ul {
+
+            li {
+                display: block;
+                background-color: lime;
+                border: 1px solid black;
+                padding: 10px;
+                width: 50px;
+            }
+        }
+
+        .ambFloats {
+            overflow: hidden;
+
+            li {
+                height: 50px;
+                float: left;
+
+                line-height: 50px;
+            }
+
+            li:nth-child(3) {
+                background-color: blue;
+            }
+
+        }
+
+        .ambFlex {
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            li {
+                background-color: orange;
+
+                order: 3;
+            }
+
+            li:nth-child(1) {
+                flex-grow: 2;
+            }
+
+            li:nth-child(2) {
+                flex-shrink: 1;
+            }
+
+            li:nth-child(3) {
+                background-color: red;
+                order: 1;
+                flex-grow: 2;
+                flex-basis: 100%;
+            }
+
+
+        }
+
+    }
+
+    .capsa {
+        height: 100%;
+
+        p {
+            overflow: auto;
+        }
+
+        img {
+            float: left;
+            clear: left;
+            margin: 20px;
+        }
+
+        .noticia {
+            background-color: red;
+            height: 200px;
+            //clear: both;
+        }
+    }
+}

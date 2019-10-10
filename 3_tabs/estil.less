@@ -1,0 +1,29 @@
+#edu_iesmila_daw2_diw {
+    ul {
+        position: relative;
+        overflow: auto;
+        top: 1px;
+
+        li {
+            display: block;
+            border: 1px solid black;
+            float: left;
+            padding: 10px;
+            position: relative;
+
+            z-index: 20;
+
+            &.selected {
+                border-bottom-color: white;
+            }
+        }
+    }
+
+    main {
+        position: relative;
+        //top: 0px;
+        z-index: 10;
+        border-top: 1px solid red;
+    }
+
+}
