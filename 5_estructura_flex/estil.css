@@ -55,3 +55,28 @@
   align-items: flex-start;
   justify-content: space-around;
 }
+@media (max-width: 400px) {
+  #edu_iesmila_diw main {
+    flex-direction: column-reverse;
+  }
+}
+@media (min-width: 400px) and (max-width: 700px) {
+  #edu_iesmila_diw header {
+    background-color: #d4e22b;
+  }
+  #edu_iesmila_diw main {
+    flex-wrap: wrap;
+  }
+  #edu_iesmila_diw main aside:nth-child(1) {
+    order: 2;
+    flex: 1;
+  }
+  #edu_iesmila_diw main section {
+    order: 3;
+    flex: 2;
+  }
+  #edu_iesmila_diw main aside:nth-child(3) {
+    flex-basis: 100%;
+    order: 1;
+  }
+}

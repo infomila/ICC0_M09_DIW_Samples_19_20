@@ -66,4 +66,36 @@
 
         section {}
     }
+
+    @media (max-width: 400px) {
+        main {
+            flex-direction: column-reverse;
+        }
+    }
+
+    @media (min-width:400px) and (max-width: 700px) {
+        header {
+            background-color: #d4e22b;
+
+        }
+
+        main {
+            flex-wrap: wrap;
+
+            aside:nth-child(1) {
+                order: 2;
+                flex: 1;
+            }
+
+            section {
+                order: 3;
+                flex: 2;
+            }
+
+            aside:nth-child(3) {
+                flex-basis: 100%;
+                order: 1;
+            }
+        }
+    }
 }

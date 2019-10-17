@@ -1,0 +1,48 @@
+#edu_iesmila_diw {
+
+    body {
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+        grid-template-rows: 1fr 2fr 1fr;
+        min-height: 100vh;
+        
+        grid-template-areas: 
+            "header header header"
+            "sideleft main sideright"
+            "footer footer footer";
+        
+    }
+    
+    header {
+        background-color: red;
+        grid-area:header;
+        //grid-column: 1 e("/")  4;
+        //grid-row: 1 e("/")  2;
+    }
+    footer {
+        background-color: orange;
+        grid-area:footer;
+        //grid-column: 1 e("/")  4;
+        //grid-row: 3 e("/")  4;
+    }
+    aside {
+        background-color: violet;
+        //grid-row: 2 e("/")  3;
+        &.left{
+            //grid-column: 1 e("/") 2;
+            grid-area:sideleft;
+        }
+        &.right{
+            //grid-column: 3 e("/") 4;
+            grid-area:sideright;
+        }
+    }
+    section {
+        //grid-column: 2 e("/")  3;
+        //grid-row: 2 e("/")  3;  
+        grid-area:main;
+    }
+    
+    
+    
+}
