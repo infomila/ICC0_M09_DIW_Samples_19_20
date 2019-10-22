@@ -6,6 +6,10 @@
   min-height: 100vh;
   grid-template-areas: "header header header" "sideleft main sideright" "footer footer footer";
 }
+#edu_iesmila_diw div {
+  grid-area: var(--area);
+  background-color: lime;
+}
 #edu_iesmila_diw header {
   background-color: red;
   grid-area: header;
