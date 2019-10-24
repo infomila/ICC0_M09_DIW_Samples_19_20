@@ -5,14 +5,6 @@ html .labels {
 html input[type=radio] {
   visibility: hidden;
 }
-html label {
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: aquamarine;
-  margin: 10px;
-}
 html ul {
   transition: left 1s;
 }
@@ -34,8 +26,44 @@ html #r2:checked ~ section ul {
 html #r3:checked ~ section ul {
   left: -200vw;
 }
+html #r1:checked ~ .slider .botonera label[for=r2] {
+  display: block;
+}
+html #r2:checked ~ .slider .botonera label[for=r3] {
+  display: block;
+}
+html #r3:checked ~ .slider .botonera label[for=r1] {
+  display: block;
+}
+html .labels label {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: aquamarine;
+  margin: 10px;
+}
 html .slider {
   overflow: hidden;
+  position: relative;
+}
+html .slider .botonera {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2em;
+  color: white;
+}
+html .slider .botonera div {
+  margin: 10px;
+}
+html .slider .botonera label {
+  display: none;
 }
 html .slider ul {
   display: flex;

@@ -1,72 +1,128 @@
 
-html {
-       
-    .labels {
-        display: flex;
-        
-    }
-    
-    input[type=radio]{
-        visibility: hidden;
-        
-    }
-    label{
-        display: block;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: aquamarine;
-        margin: 10px;
-    }
-    ul {
-        transition: left 1s;
-    }
-    #r1:checked ~ section label[for=r1] {
-        background-color: black;
-    }
-    #r2:checked ~ section label[for=r2] {
-        background-color: black;
-    }    
-    #r3:checked ~ section label[for=r3] {
-        background-color: black;
-    }
-    
-    #r1:checked ~ section ul {
-        left: 0vw;
-        
-    }
-    #r2:checked ~ section ul {
-        left: -100vw;
-    }
-    #r3:checked ~ section ul {
-        left: -200vw;
-    }    
-    .slider {
-    overflow: hidden;    
-        ul {
-            display: flex;
-            position: relative;
-            width:300vw;
-            left: -200vw;
 
-            li {
-                display: block;
-                width:100vw;
-                img{
-                    width:100vw;
+    html {
+
+        .labels {
+            display: flex;
+
+        }
+
+        input[type=radio]{
+            visibility: hidden;
+
+        }
+
+
+
+        ul {
+           transition: left 1s;
+        }
+        #r1:checked ~ section label[for=r1] {
+            background-color: black;
+        }
+        #r2:checked ~ section label[for=r2] {
+            background-color: black;
+        }    
+        #r3:checked ~ section label[for=r3] {
+            background-color: black;
+        }
+
+        #r1:checked ~ section ul {
+            left: 0vw;
+
+        }
+        #r2:checked ~ section ul {
+            left: -100vw;
+        }
+        #r3:checked ~ section ul {
+            left: -200vw;
+        }    
+
+
+        #r1:checked ~ .slider .botonera label[for=r2] {
+            display: block;
+        }
+        #r2:checked ~ .slider .botonera label[for=r3] {
+            display: block;
+        }        
+        #r3:checked ~ .slider .botonera label[for=r1] {
+            display: block;
+        }         
+        
+        
+        
+        
+    .labels {
+                        label{
+                        display: block;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color: aquamarine;
+                        margin: 10px;
+                    }
+
+                }    
+
+
+        .slider {
+            overflow: hidden;  
+            position:relative;
+
+
+            .botonera {
+                
+                //background-color: red;
+                height:  100%;
+                width:100%;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                display: flex;
+                justify-content:space-between;
+                align-items:center;
+                font-size: 2em;
+                color: white;
+                div{
+                    margin: 10px;
                 }
+                
+                
+                label {
+                    display: none;                  
+                }
+                
             }
-            li:nth-child(1) {
-                background-color: lightblue;
-            }
-            li:nth-child(2) {
-                background-color: red;
-            }
-            li:nth-child(3) {
-                background-color: blue;
+
+
+
+            ul {
+                display: flex;
+                position: relative;
+                width:300vw;
+                left: -200vw;
+
+                li {
+                    display: block;
+                    width:100vw;
+                    img{
+                        width:100vw;
+                    }
+                }
+                li:nth-child(1) {
+                    background-color: lightblue;
+                }
+                li:nth-child(2) {
+                    background-color: red;
+                }
+                li:nth-child(3) {
+                    background-color: blue;
+                }
+
+
+
             }
         }
+
+
     }
-    
-    
-}
