@@ -1,6 +1,28 @@
 
+.generarChecks(@n, @i: 1) when (@i =< @n) {
+    @k:~"r@{i}";
+    @i1: @i + 1;
+    
 
-    html {
+    
+    @k1:~"r@{i1}";
+    #@{k}:checked ~ section {
+        label[for=@{k}] {
+            background-color: black;
+            }
+        ul {
+            left: -100vw * (@i - 1);
+        }
+
+        .botonera  label[for=@{k1}] {
+            display: block;
+        }
+    }
+    .generarChecks(@n, (@i + 1));
+
+}
+
+#edu_iesmila_diw {
 
         .labels {
             display: flex;
@@ -17,6 +39,12 @@
         ul {
            transition: left 1s;
         }
+        
+        .generarChecks(3,1);
+        
+        /*
+
+        
         #r1:checked ~ section label[for=r1] {
             background-color: black;
         }
@@ -48,9 +76,9 @@
         #r3:checked ~ .slider .botonera label[for=r1] {
             display: block;
         }         
+         
         
-        
-        
+        */
         
     .labels {
                         label{

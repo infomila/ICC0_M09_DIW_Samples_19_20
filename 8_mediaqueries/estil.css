@@ -1,4 +1,34 @@
-
-html {
-         height:100%;
+html header {
+  text-align: center;
+}
+html article,
+html nav,
+html header {
+  background-color: #999999;
+  margin: 10px;
+  padding: 10px;
+}
+html nav img {
+  display: block;
+  margin: 0px auto;
+  width: 100%;
+}
+html article span {
+  font-weight: bold;
+}
+html article p {
+  margin-bottom: 10px;
+}
+html article > ul {
+  display: flex;
+}
+html article > ul li {
+  margin: 10px;
+}
+html article footer h2 {
+  font-weight: bolder;
+}
+html article footer img {
+  float: left;
+  margin: 10px;
 }
