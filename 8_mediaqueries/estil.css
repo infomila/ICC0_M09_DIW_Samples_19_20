@@ -32,3 +32,34 @@ html article footer img {
   float: left;
   margin: 10px;
 }
+@media screen and (min-width: 600px) {
+  html body {
+    max-width: 800px;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  html body header {
+    flex-basis: 100%;
+  }
+  html body main {
+    flex: 1;
+  }
+  html body main > article {
+    position: relative;
+    padding-left: 60px;
+  }
+  html body main > article > img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 10px;
+  }
+  html body main > article footer li {
+    align-items: flex-start;
+    display: flex;
+  }
+  html body main > article footer li img {
+    display: block;
+  }
+}

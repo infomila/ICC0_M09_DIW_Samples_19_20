@@ -1,5 +1,6 @@
 
 html {
+    
     header{
         text-align: center;
     }
@@ -42,7 +43,48 @@ html {
             }
         }
     }
+}
 
+@media screen and (min-width:600px) {
+    html {
+        body {
+            max-width: 800px;
+            margin: 0px auto;
+            display: flex;
+            flex-wrap: wrap;
+            header {
+                flex-basis: 100%
+            }
+            main{
+                flex:1;
+            
 
+            > article{
+                
+                position: relative;
+                >img {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    margin: 10px;
+                }
+                padding-left: 60px;
+
+                footer {
+                    
+                    li{
+                        align-items:flex-start;
+                    display: flex;
+                    img {
+                        display: block;
+                    }
+                }
+                }
+            }
+            }
+
+        }
+
+    }
 }
 
