@@ -1,10 +1,37 @@
-main {
-  background-color: cadetblue;
+header img {
+  height: 200px;
+  object-fit: cover;
 }
-
-main img {
-  opacity: 0.7;
+article {
+  border: 1px solid black;
+}
+.a {
+  background-color: yellow;
+}
+.b {
+  background-color: blue;
+}
+.c {
+  background-color: green;
+}
+.d {
+  background-color: orange;
+}
+.e {
+  background-color: violet;
+}
+img {
   display: block;
   width: 100%;
 }
-/*# sourceMappingURL=estil.css.map */
+.noticia {
+  background-color: lime;
+  border: 1px solid black;
+}
+nav {
+  background-color: black;
+}
+li {
+  display: block;
+  color: black;
+}

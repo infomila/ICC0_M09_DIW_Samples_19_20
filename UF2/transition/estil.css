@@ -1,0 +1,47 @@
+main {
+  height: 20vh;
+  width: 100vw;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+}
+main:hover ul {
+  transform: translateY(0%);
+  transition: transform 0.5s;
+}
+main ul {
+  transform: translateY(100%);
+  transition: transform 0.5s;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  align-items: flex-end;
+}
+main ul li {
+  display: block;
+  margin: 10px;
+  display: flex;
+  align-items: flex-end;
+  height: 85px;
+}
+main ul li:hover div {
+  height: 85px;
+  width: 85px;
+}
+main ul li:hover + li div {
+  height: 72.25px;
+  width: 72.25px;
+}
+main ul li:hover + li + li div {
+  height: 59.5px;
+  width: 59.5px;
+}
+main ul li div {
+  transition: all 0.5s;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+}

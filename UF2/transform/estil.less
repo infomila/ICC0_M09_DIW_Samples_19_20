@@ -1,0 +1,47 @@
+.capsa {
+    width: 100px;
+    height: 100px;
+    background-color: lime;
+    transform: translate(100px,100px) rotate(45deg);
+    //transform-origin: 0% 0%;
+}   
+
+.planeta {
+    display: block;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+@mida_terra: 100px;
+@mida_lluna: 30px;
+.terra {
+    width: @mida_terra;
+    height: @mida_terra;
+    background-color: brown;
+    
+    line-height:  @mida_terra;
+}
+.lluna {
+    width: @mida_lluna;
+    height: @mida_lluna;
+    background-color: whitesmoke;
+    position: absolute;
+    top:   0.5 * ( @mida_terra - @mida_lluna );
+    left:   0.5 * ( @mida_terra - @mida_lluna );
+    line-height:  @mida_lluna;
+
+    transform: rotate(0deg) translateX(@mida_terra) rotate(0deg);
+    
+
+}
+#sistema_planetari{
+    position: fixed;
+    top:50%;left: 50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+
+    &:hover  .lluna{
+        transform: rotate(360deg) translateX(@mida_terra) rotate(-720deg);
+        transition: transform 4s ease-in-out;
+    }
+
+}

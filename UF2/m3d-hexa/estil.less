@@ -1,0 +1,41 @@
+@mida:200px;
+@h: @mida * 0.5 * tan(60deg);
+main {
+    perspective: 900px;
+    width: 100vw;
+    height: 100vh;
+ 
+    .hexacarrousel {
+        
+        transform-style: preserve-3d;
+        position: absolute;
+        width: @mida;
+        height: @mida;
+        top: calc( 50% - @mida / 2 ); 
+        left: calc( 50% - @mida / 2 ); 
+        .cara {
+            position: absolute;
+            top:0px;
+            left:0px;
+            width: @mida;
+            height: @mida;
+            background-color: red;
+            
+        }
+
+
+        .cara_hexagon();
+
+    }
+
+}
+
+.cara_hexagon(@i:1) when (@i=<6)        {
+    .cara:nth-child(@{i}) {
+        transform: rotateY((@i - 1) * 60 deg) translateZ(@h);
+    }
+    .cara_hexagon(@i+1);
+}
+
+
+
