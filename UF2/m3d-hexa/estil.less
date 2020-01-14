@@ -1,12 +1,33 @@
 @mida:200px;
 @h: @mida * 0.5 * tan(60deg);
+
+.input_carrousel(@i:1) when (@i<=6) {
+    input:nth-child(1):checked ~ .hexacarrousel{
+        transform:rotateY(0deg);
+    } 
+}
+
+
 main {
     perspective: 900px;
     width: 100vw;
     height: 100vh;
  
+ 
+    /*ul  {
+        display: flex;
+        position: absolute;
+        left:50%;
+        top:30%;
+        transform: translateX(-50%);
+    
+    }*/
+
     .hexacarrousel {
-        
+        transition:transform 1s;
+        &:hover {
+            transform:rotateY(360deg);
+        }
         transform-style: preserve-3d;
         position: absolute;
         width: @mida;
@@ -19,21 +40,23 @@ main {
             left:0px;
             width: @mida;
             height: @mida;
-            background-color: red;
-            
-        }
-
-
-        .cara_hexagon();
-
+            background-color: red;            
+        }        
     }
-
+    .cara_hexagon();
 }
 
-.cara_hexagon(@i:1) when (@i=<6)        {
-    .cara:nth-child(@{i}) {
-        transform: rotateY((@i - 1) * 60 deg) translateZ(@h);
+.cara_hexagon(@i:1) when (@i=<6)
+{
+    .hexacarrousel {
+        .cara:nth-child(@{i}) {
+            transform: rotateY((@i - 1) * 60deg) translateZ(@h);
+        }
+        
     }
+    input:nth-child(@{i}):checked ~ .hexacarrousel{
+        transform:rotateY((@i - 1) * 60deg);
+    } 
     .cara_hexagon(@i+1);
 }
 

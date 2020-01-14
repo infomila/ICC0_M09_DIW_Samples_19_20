@@ -1,0 +1,52 @@
+main {
+  perspective: 900px;
+  width: 100vw;
+  height: 100vh;
+}
+main ul {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+main ul li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: lime;
+  margin: 5px;
+  animation-name: bouncing;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+main ul li:nth-child(2) {
+  animation-delay: 0.16666667s;
+}
+main ul li:nth-child(3) {
+  animation-delay: 0.33333333s;
+}
+main ul li:nth-child(4) {
+  animation-delay: 0.5s;
+}
+main ul li:nth-child(5) {
+  animation-delay: 0.66666667s;
+}
+main ul li:nth-child(6) {
+  animation-delay: 0.83333333s;
+}
+@keyframes bouncing {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

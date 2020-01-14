@@ -1,0 +1,62 @@
+main .cotxe {
+  transform: scaleX(-1);
+  width: 200px;
+  position: relative;
+}
+main .cotxe img {
+  width: 100%;
+  animation: anim_bot 1s;
+  animation-iteration-count: infinite;
+}
+main .cotxe .roda {
+  position: absolute;
+  bottom: 0px;
+  width: 20.09%;
+  animation: anim_roda 0.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+}
+main .cotxe .darrera {
+  left: 8.5%;
+}
+main .cotxe .davant {
+  left: 65%;
+}
+main .cotxe .smoke {
+  width: 114px;
+  height: 55px;
+  background-image: url("sprite.png");
+  background-position: 0px -2px;
+  background-repeat: repeat-y;
+  animation: smoke 1s;
+  animation-timing-function: steps(11);
+  animation-iteration-count: infinite;
+}
+@keyframes smoke {
+  0% {
+    background-position: 0px -2px;
+  }
+  100% {
+    background-position: 0px -899.55px;
+  }
+}
+@keyframes anim_roda {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes anim_bot {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

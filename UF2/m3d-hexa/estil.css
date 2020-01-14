@@ -2,14 +2,26 @@ main {
   perspective: 900px;
   width: 100vw;
   height: 100vh;
+  /*ul  {
+        display: flex;
+        position: absolute;
+        left:50%;
+        top:30%;
+        transform: translateX(-50%);
+    
+    }*/
 }
 main .hexacarrousel {
+  transition: transform 1s;
   transform-style: preserve-3d;
   position: absolute;
   width: 200px;
   height: 200px;
   top: calc(50% - 200px / 2);
   left: calc(50% - 200px / 2);
+}
+main .hexacarrousel:hover {
+  transform: rotateY(360deg);
 }
 main .hexacarrousel .cara {
   position: absolute;
@@ -20,20 +32,38 @@ main .hexacarrousel .cara {
   background-color: red;
 }
 main .hexacarrousel .cara:nth-child(1) {
-  transform: rotateY(0 deg) translateZ(173.20508076px);
+  transform: rotateY(0deg) translateZ(173.20508076px);
+}
+main input:nth-child(1):checked ~ .hexacarrousel {
+  transform: rotateY(0deg);
 }
 main .hexacarrousel .cara:nth-child(2) {
-  transform: rotateY(60 deg) translateZ(173.20508076px);
+  transform: rotateY(60deg) translateZ(173.20508076px);
+}
+main input:nth-child(2):checked ~ .hexacarrousel {
+  transform: rotateY(60deg);
 }
 main .hexacarrousel .cara:nth-child(3) {
-  transform: rotateY(120 deg) translateZ(173.20508076px);
+  transform: rotateY(120deg) translateZ(173.20508076px);
+}
+main input:nth-child(3):checked ~ .hexacarrousel {
+  transform: rotateY(120deg);
 }
 main .hexacarrousel .cara:nth-child(4) {
-  transform: rotateY(180 deg) translateZ(173.20508076px);
+  transform: rotateY(180deg) translateZ(173.20508076px);
+}
+main input:nth-child(4):checked ~ .hexacarrousel {
+  transform: rotateY(180deg);
 }
 main .hexacarrousel .cara:nth-child(5) {
-  transform: rotateY(240 deg) translateZ(173.20508076px);
+  transform: rotateY(240deg) translateZ(173.20508076px);
+}
+main input:nth-child(5):checked ~ .hexacarrousel {
+  transform: rotateY(240deg);
 }
 main .hexacarrousel .cara:nth-child(6) {
-  transform: rotateY(300 deg) translateZ(173.20508076px);
+  transform: rotateY(300deg) translateZ(173.20508076px);
+}
+main input:nth-child(6):checked ~ .hexacarrousel {
+  transform: rotateY(300deg);
 }
