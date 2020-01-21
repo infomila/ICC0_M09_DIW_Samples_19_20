@@ -1,7 +1,34 @@
-main .cotxe {
-  transform: scaleX(-1);
-  width: 200px;
+main {
+  height: 300px;
+  overflow: hidden;
   position: relative;
+  background-image: url(cel2.jpg);
+  background-repeat: repeat-x;
+  background-size: 50%;
+  animation: anim_cel 10s linear 0s infinite;
+  animation-direction: reverse;
+  margin: 0px;
+  padding: 0px;
+}
+main .semafor {
+  height: 25%;
+  animation: anim_semafor 5s linear 0s infinite;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+}
+main .semafor img {
+  height: 100%;
+}
+main .cotxe {
+  transform: translateX(-50%) scale(-0.5, 0.5);
+  transform-origin: 50% 100%;
+  width: 200px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  margin: 0px;
+  padding: 0px;
 }
 main .cotxe img {
   width: 100%;
@@ -32,13 +59,21 @@ main .cotxe .smoke {
   animation: smoke 1s;
   animation-timing-function: steps(11);
   animation-iteration-count: infinite;
+  position: absolute;
+  left: 95%;
+  bottom: 5px;
 }
 @keyframes smoke {
   0% {
     background-position: 0px -2px;
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(3px);
   }
   100% {
-    background-position: 0px -899.55px;
+    background-position: 0px -902px;
+    transform: translateY(0px);
   }
 }
 @keyframes anim_roda {
@@ -58,5 +93,21 @@ main .cotxe .smoke {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+@keyframes anim_cel {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
+@keyframes anim_semafor {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -20%;
   }
 }

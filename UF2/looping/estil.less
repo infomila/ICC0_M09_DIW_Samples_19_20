@@ -1,15 +1,42 @@
 main {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    background-image: url(cel2.jpg);
+    background-repeat: repeat-x;
+    background-size: 50%;
+    animation: anim_cel 10s linear 0s infinite;
+    animation-direction: reverse;
+    margin: 0px;
+    padding: 0px;
+
+    .semafor {
+        height: 25%;
+        animation: anim_semafor 5s linear 0s infinite;
+        //animation-direction: reverse;
+     img {
+        height: 100%;
+     }   
+     position: absolute;
+        bottom: 0px;
+        left:50%;
+    }
 
     .cotxe {
-        transform: scaleX(-1);
-        //background-image: url("cotxe.png");
+        transform: translateX(-50%) scale(-0.5, 0.5) ;
+        transform-origin: 50% 100%;
         width:200px;
-        img {
+        position: absolute;
+        bottom: 0px;
+        left:50%;
+        margin: 0px;
+        padding:0px;
+        img { 
             width: 100%;
             animation:anim_bot 1s;
             animation-iteration-count: infinite;
         }
-        position:relative;
+        
         .roda{
             position:absolute;
             bottom:0px;
@@ -35,13 +62,22 @@ main {
             animation: smoke 1s;
             animation-timing-function: steps(11);
             animation-iteration-count: infinite;
+            //------------------
+            // posicionament
+            position: absolute;
+            left:95%;
+            bottom:5px;
+            
         }
     }
 
 }
 @keyframes smoke {
-    0% {background-position: 0px -2px;}
-    100%{background-position: 0px -899.55px;}
+    0% {background-position: 0px -2px;
+        transform:translateY(0px);}
+    50%  {transform:translateY(3px); }
+    100%{background-position: 0px -902px;
+        transform:translateY(0px);}
 }
 @keyframes anim_roda {
     0%   {transform:rotate(0deg); }
@@ -52,4 +88,15 @@ main {
     0%   {transform:translateY(0px); }
     50%  {transform:translateY(3px); }
     100% {transform:translateY(0px); }
+}
+
+@keyframes anim_cel {
+    0%{ background-position-x:0px; }
+    100%{ background-position-x:100%;}
+}
+
+
+@keyframes anim_semafor {
+    0%{ left:100%; }
+    100%{ left: -20%;}
 }
