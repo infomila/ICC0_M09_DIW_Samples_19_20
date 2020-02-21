@@ -1,0 +1,31 @@
+
+.capsa {
+    height:100vh;
+    width:100vw;
+    position:relative;
+}
+.capsa:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+   background-image:url(
+        data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAHUlEQVQYV2NkwAEYiZH4D1UEVoysA6cEiqk47QAAmZMCB/g/V3sAAAAASUVORK5CYII=
+   ) ;
+   opacity: 0.4;
+   background-repeat:repeat;
+   background-color:rgba(255,243,180, 0.5);
+}
+
+.my_video {
+    object-fit: cover;
+}
+
+body {
+    margin:0px;
+}
+
+ 
