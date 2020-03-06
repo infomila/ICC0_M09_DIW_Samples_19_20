@@ -1,0 +1,32 @@
+<!DOCTYPE html >
+
+<html>
+
+<head>
+    <title>title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="estil.css" />
+    <link rel="stylesheet" type="text/css" href="jquery.background-video.css" />
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="jquery.background-video.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.my-background-video').bgVideo();
+        });
+    </script>
+</head>
+
+<body>
+    <div id="video_back" class="jquery-background-video-wrapper">
+        <video autoplay loop muted
+		height="100%" width="100%"
+		class="my-background-video jquery-background-video">
+            <source src="LITTLE_STREAM_loop.mp4" type="video/mp4">
+        </video>
+    </div>
+
+</body>
+
+
+</html>

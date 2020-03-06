@@ -1,0 +1,28 @@
+<!DOCTYPE html >
+
+<html>
+	<head>
+        <title>title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+
+        <link rel="stylesheet" type="text/css" href="css/estil.css" />        
+        <link href="https://vjs.zencdn.net/7.6.6/video-js.css" rel="stylesheet" />
+        <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+        <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+	</head>
+
+	<body>
+		<main>
+			 
+				<video id="my-video"
+                data-setup="{}"
+                        class="video-js" controls loop autoplay muted width="720" height="480">                
+                    <source src="back_out_grayscale.mp4" type="video/mp4" /><!-- Safari / iOS video    -->
+                    <source src="back.webm" type="video/webm" /><!--  Chrome10 -->
+                    <source src="back.ogv" type="video/ogg" /><!-- Firefox / Opera / Chrome10 -->                               
+                </video>
+		    
+		</main>		
+        <script src="https://vjs.zencdn.net/7.6.6/video.js"></script>
+	</body>
+</html>

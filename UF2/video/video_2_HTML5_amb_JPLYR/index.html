@@ -1,0 +1,37 @@
+<!DOCTYPE html >
+
+<html>
+	<head>
+	    <title>title</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+
+        <link rel="stylesheet" href="https://cdn.plyr.io/3.5.10/plyr.css" />
+        <link rel="stylesheet" type="text/css" href="css/estil.css" />
+        
+        <script>
+  
+        </script>
+	</head>
+
+	<body>
+		<main>
+			 
+				<video class="my_video" id="player" controls loop autoplay muted width="100%" height="100%">                
+                    <source src="back_out_grayscale.mp4" type="video/mp4" /><!-- Safari / iOS video    -->
+                    <source src="back.webm" type="video/webm" /><!--  Chrome10 -->
+                    <source src="back.ogv" type="video/ogg" /><!-- Firefox / Opera / Chrome10 -->                               
+                </video>
+		    
+		</main>		
+        <script src="https://cdn.plyr.io/3.5.10/plyr.js"></script>
+        <script>
+            const player = new Plyr('#player', {
+             title: 'SUPER TITOL',
+             settings: [ 'speed', 'loop'],
+             loop: {active:true},
+             ratio {"16:9"},
+             fullscreen:{ enabled: false, fallback: true, iosNative: false }
+            });
+        </script>
+	</body>
+</html>
